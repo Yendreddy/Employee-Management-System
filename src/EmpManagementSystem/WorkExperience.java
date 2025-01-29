@@ -1,6 +1,6 @@
 package EmpManagementSystem;
 
-public class WorkExperience{
+public class WorkExperience {
     String companyName;
     String jobRole;
     public WorkExperience(String companyName, String jobRole){
@@ -15,5 +15,12 @@ public class WorkExperience{
     }
     public String toString(){
         return String.format("%s,%s",companyName,jobRole);
+    }
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public String getJobRole() {
+        return jobRole;
     }
 }

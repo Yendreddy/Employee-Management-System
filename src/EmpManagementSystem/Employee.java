@@ -4,18 +4,18 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class Employee{
+public class Employee {
 
     private static int autoIncrementId = 100;
-    private int empId;
-    private String name;
-    private String designation;
-    private String phoneNumber;
-    private double salary;
-    private String email;
+    public int empId;
+    public String name;
+    public String designation;
+    public String phoneNumber;
+    public double salary;
+    public String email;
     Address address;
     List<WorkExperience> workHistory;
-    public Employee(String name, String designation, String phoneNumber, Double salary, String email,Address address, List<WorkExperience> workHistory){//Initializes Employee object
+    public Employee(String name, String designation, String phoneNumber, Double salary, String email, Address address, List<WorkExperience> workHistory){//Initializes Employee object
         this.empId = autoIncrementId++;
         this.name = validateString(name, "name");
         this.designation = validateString(designation,"designation");
@@ -67,6 +67,33 @@ public class Employee{
             case "work experience" -> this.workHistory = (List<WorkExperience>) value;
             default -> throw new IllegalArgumentException("Not in the required fields"+ detail);
         }
+    }
+    public String getName() {
+        return name;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public List<WorkExperience> getWorkHistory() {
+        return workHistory;
     }
 
 }

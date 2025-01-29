@@ -1,5 +1,5 @@
 package EmpManagementSystem;
-public class Address{
+public class Address {
     String streetNumber;
     String streetName;
     String city;
@@ -20,5 +20,24 @@ public class Address{
     }
     public String toString(){
         return String.format("%s, %s, %s, %s, %s",streetNumber,streetName,city,state,country);
+    }
+    public String getStreetNumber() {
+        return streetNumber;
+    }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getCountry() {
+        return country;
     }
 }
