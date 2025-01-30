@@ -7,12 +7,12 @@ import java.util.Objects;
 public class Employee {
 
     private static int autoIncrementId = 100;
-    public int empId;
-    public String name;
-    public String designation;
-    public String phoneNumber;
-    public double salary;
-    public String email;
+    private int empId;
+    private String name;
+    private String designation;
+    private String phoneNumber;
+    private double salary;
+    private String email;
     Address address;
     List<WorkExperience> workHistory;
     public Employee(String name, String designation, String phoneNumber, Double salary, String email, Address address, List<WorkExperience> workHistory){//Initializes Employee object

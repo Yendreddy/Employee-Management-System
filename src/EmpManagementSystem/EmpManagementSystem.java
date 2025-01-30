@@ -342,11 +342,11 @@ public class EmpManagementSystem {
             String updateEmployeeQuery = "UPDATE Employee3 SET name = ?, designation = ?, phone_number = ?, salary = ?, email = ? WHERE emp_id = ?";
             try {
                 PreparedStatement employeeStatement = connection.prepareStatement(updateEmployeeQuery);
-                employeeStatement.setString(1, emp.name);
-                employeeStatement.setString(2, emp.designation);
-                employeeStatement.setString(3, emp.phoneNumber);
-                employeeStatement.setDouble(4, emp.salary);
-                employeeStatement.setString(5, emp.email);
+                employeeStatement.setString(1, emp.getName());
+                employeeStatement.setString(2, emp.getDesignation());
+                employeeStatement.setString(3, emp.getPhoneNumber());
+                employeeStatement.setDouble(4, emp.getSalary());
+                employeeStatement.setString(5, emp.getEmail());
                 employeeStatement.setInt(6, empId);
                 employeeStatement.executeUpdate();
             } catch (SQLException e) {
